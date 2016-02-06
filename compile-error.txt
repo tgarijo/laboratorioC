@@ -1,0 +1,9 @@
+Este error se produce en cdt al importar un proyecto
+
+Error al compilar
+
+After creating project - go to Properties->C/C++ Build and select "Refresh Policy" tab. 
+There is a weird "secondEclipseTest" entry - removing it fixes this error.
+
+in case of make error,go to project ->properties->c/c++ build->tool chain editor->select 
+tools and select Cygwin C Compiler for C and Cygwin C++ Compiler for C++
