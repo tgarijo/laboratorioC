@@ -6,7 +6,7 @@
  *      Se ha hecho el uso de punteros a funciones para exponer la funcionalidad
  *      En este caso no era muy necesario ya que Los arrary de forma global hubiera bastado,
  *      pero es programas mas extensos los arrays globales no aplican la "ley" de conservacion de
- *      recurtos
+ *      recursos
  *
  */
 
