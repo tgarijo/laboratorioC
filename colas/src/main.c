@@ -9,7 +9,7 @@
 
 #define maxPilaSize 3
 
-int cima, frente, final;
+int cima, frente, final,cabecera;
 
 int cola[maxPilaSize];
 
@@ -18,10 +18,12 @@ int screen();
 
 void main()
 {
+
 	cima=0;
 	frente=0;
 	final=maxPilaSize;
 
+	inicializar_example();
 	int menu;
 
 		do{
@@ -29,10 +31,10 @@ void main()
 			switch(menu)
 			{
 				case 1:
-					insertar();
+					insertar_example();
 					break;
 				case 2:
-					eliminar();
+					eliminar_example();
 					break;
 				/*case 3:
 					printf("\n\nUltimo dato de pila %d", consultar());
@@ -59,6 +61,60 @@ void eliminar()
 	final++;
 
 }
+
+
+void  inicializar_example()
+{
+	cabecera=0;
+	final = 0;
+
+}
+void insertar_example()
+{
+
+	int data;
+
+	if(final==0)
+		cabecera=1;
+
+	printf("Introduzca dato.... ");
+	scanf("%d", &data);
+	final = final+1;
+	cola[final]=data;
+
+}
+
+int isVoid_Example()
+{
+	if(cabecera==0)
+		return 1;
+	else return 0;
+}
+
+
+
+//	Controla si la pila esta llena
+int isFull()
+{
+	if (final==0) return 1;
+	else return 0;
+}
+
+
+void eliminar_example()
+{
+	int data;
+
+	data=cola[cabecera];
+	cabecera = cabecera +1;
+
+	if(cabecera==final+1){
+		cabecera=0;
+		final=0;
+	}
+
+}
+
 
 void insertar()
 {
@@ -87,12 +143,7 @@ int isEmpty()
 	else return 0;
 }
 
-//	Controla si la pila esta llena
-int isFull()
-{
-	if (final==0) return 1;
-	else return 0;
-}
+
 
 void pause()
 {
