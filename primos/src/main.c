@@ -12,7 +12,9 @@
 
 int main()
 {
-  int resto=0,n=0,c=0,x=0,nc=0;
+  int resto=0;//Resto de mod
+  int c=0;
+  int x=0,x1=0;
 
   // Bucle de los numeros hasta NMAX
   for(c=1;c<=NMAX;c++)
@@ -22,13 +24,13 @@ int main()
     	resto=c%x; // comprobamos el resto
     	if(resto==0)
     	{
-    		nc=nc+1; //contador de veces que divide
+    		x1=x1+1; //contador de veces que divide
     	}
     }
-    if(nc==2) // Si el contador es igual a dos es primo
+    if(x1==2) // Si el contador es igual a dos es primo
     {
     	printf("Es primo el numero %d \t ",c);
     }
-    nc=0;
+    x1=0;
   }
 }
