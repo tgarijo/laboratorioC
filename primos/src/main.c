@@ -3,6 +3,10 @@
  *
  *  Created on: 09/05/2016
  *      Author: tgarijo
+ * Entorno: Eclipse
+ * S.O: Linux 3.16.0-38-generic
+ *
+ * Escriba un programa en C que escriba los números primos entre 1 y 9999
  */
 
 
